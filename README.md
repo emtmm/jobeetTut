@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Symfony Standard Edition
 ========================
 
@@ -174,3 +175,9 @@ Enjoy!
 [13]: http://jmsyst.com/bundles/JMSSecurityExtraBundle/master
 [14]: http://jmsyst.com/bundles/JMSDiExtraBundle/master
 [15]: http://symfony.com/doc/2.1/bundles/SensioGeneratorBundle/index.html
+=======
+jobeetTut
+=========
+
+Jobeet tutorial using Symfony 2.1.3
+>>>>>>> e6dae14585c119f6eab083878a3e8dd7b03c18ab
