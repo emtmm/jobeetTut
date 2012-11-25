@@ -4,19 +4,29 @@
   <link rel="stylesheet" href="{{ asset('bundles/ensjobeet/css/jobs.css') }}" type="text/css" media="all" />
 {% endblock %}
 {% block content %}
-    <div id="jobs">
-      <table class="jobs">
-        {% for entity in entities %}
+  <div id="jobs">
+    {% for category in categories %}
+      <div>
+        <div class="category">
+          <div class="feed">
+            <a href="">Feed</a>
+          </div>
+          <h1>{{ category.name }}</h1>
+        </div>
+        <table class="jobs">
+          {% for entity in category.activejobs %}
           <tr class="{{ cycle(['even', 'odd'], loop.index) }}">
             <td class="location">{{ entity.location }}</td>
             <td class="position">
-              <a href="{{ path('ens_job_show', { 'id': entity.id }) }}">
+              <a href="{{ path('ens_job_show', { 'id': entity.id, 'company': entity.companyslug, 'location': entity.locationslug, 'position': entity.locationslug }) }}">
                 {{ entity.position }}
               </a>
             </td>
             <td class="company">{{ entity.company }}</td>
           </tr>
-        {% endfor %}
-      </table>
-    </div>
+          {% endfor %}
+        </table>
+      </div>
+    {% endfor %}
+  </div>
 {% endblock %}
